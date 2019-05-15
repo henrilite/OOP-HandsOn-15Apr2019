@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         coffeeMachine = CoffeeMachine(milk: 200, brand: "Nescafe")
         print("Jumlah Beans : \(coffeeMachine.numOfBeans), Jumlah Milk : \(coffeeMachine.numOfMilk)")
         updateCoffee()
+        print(coffeeMachine.voltage)
+        print(coffeeMachine.runMotor)
     }
     
     func updateCoffee(){

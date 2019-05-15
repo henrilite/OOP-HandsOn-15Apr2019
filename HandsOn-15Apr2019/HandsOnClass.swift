@@ -8,7 +8,8 @@
 
 import Foundation
 
-class CoffeeMachine {
+class CoffeeMachine : Machine {
+    
     var numOfBeans : Int = 100
     var numOfMilk : Int
     let brand : String
