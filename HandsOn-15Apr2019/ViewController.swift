@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var coffeeLabel: UILabel!
     @IBOutlet weak var milkLabel: UILabel!
     
+// Handson 16Mei
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+// ---
     var coffeeMachine: CoffeeMachine!
     
     override func viewDidLoad() {
@@ -22,7 +26,16 @@ class ViewController: UIViewController {
         updateCoffee()
         print(coffeeMachine.voltage)
         print(coffeeMachine.runMotor)
+        
+//individual delegate buat passwordtextfield, untuk username sudah didelegate dengan klik kanan di usernametextfield
+// tips untuk delegate atau konfigurasi lainnya jika dapat dilakukan di storyboard sebaiknya dilakukan di storyboard
+        
+        
+        passwordTextField.delegate = self
     }
+    
+    
+//-----
     
     func updateCoffee(){
         coffeeLabel.text = String(coffeeMachine.numOfBeans)
@@ -42,5 +55,36 @@ class ViewController: UIViewController {
         updateCoffee()
     }
     
+    @IBAction func submitButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "toDetail", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail", let destination = segue.destination as? DetailViewController {
+            destination.nameFromPreviousView = userNameTextField.text
+        }
+    }
+
+    
+}
+//Handson 16Mei - agar textfield bisa ganti ke textfield selanjutnya.
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTextField{
+            // biar harus ada isinya.
+            if textField.text == "" {
+                let alert = UIAlertController(title: "Error", message: "You should enter your username", preferredStyle: .alert)
+                //biar alert bisa diklik OK
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert,animated: true, completion: nil)
+            } else {
+                passwordTextField.becomeFirstResponder()
+            }
+            passwordTextField.becomeFirstResponder()
+        } else {
+// biar di detail dismiss atau hilang atau mengecil
+            passwordTextField.resignFirstResponder()
+        }
+        return true
+    }
 }
 

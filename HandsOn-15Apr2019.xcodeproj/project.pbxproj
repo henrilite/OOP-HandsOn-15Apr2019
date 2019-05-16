@@ -15,6 +15,7 @@
 		2A0F3124228BE7BB00E493AC /* HandsOnClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F3123228BE7BB00E493AC /* HandsOnClass.swift */; };
 		2A0F3126228C032C00E493AC /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F3125228C032C00E493AC /* Machine.swift */; };
 		2A0F3128228C053100E493AC /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F3127228C053100E493AC /* RoundedButton.swift */; };
+		2AB4BFAA228D63C40069AD47 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB4BFA9228D63C40069AD47 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2A0F3123228BE7BB00E493AC /* HandsOnClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsOnClass.swift; sourceTree = "<group>"; };
 		2A0F3125228C032C00E493AC /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
 		2A0F3127228C053100E493AC /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		2AB4BFA9228D63C40069AD47 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +62,13 @@
 		2A0F3110228BE75400E493AC /* HandsOn-15Apr2019 */ = {
 			isa = PBXGroup;
 			children = (
-				2A0F3127228C053100E493AC /* RoundedButton.swift */,
 				2A0F3123228BE7BB00E493AC /* HandsOnClass.swift */,
+				2A0F3127228C053100E493AC /* RoundedButton.swift */,
 				2A0F3125228C032C00E493AC /* Machine.swift */,
 				2A0F3111228BE75400E493AC /* AppDelegate.swift */,
 				2A0F3113228BE75400E493AC /* ViewController.swift */,
 				2A0F3115228BE75400E493AC /* Main.storyboard */,
+				2AB4BFA9228D63C40069AD47 /* DetailViewController.swift */,
 				2A0F3118228BE75500E493AC /* Assets.xcassets */,
 				2A0F311A228BE75500E493AC /* LaunchScreen.storyboard */,
 				2A0F311D228BE75500E493AC /* Info.plist */,
@@ -147,6 +150,7 @@
 				2A0F3114228BE75400E493AC /* ViewController.swift in Sources */,
 				2A0F3128228C053100E493AC /* RoundedButton.swift in Sources */,
 				2A0F3126228C032C00E493AC /* Machine.swift in Sources */,
+				2AB4BFAA228D63C40069AD47 /* DetailViewController.swift in Sources */,
 				2A0F3112228BE75400E493AC /* AppDelegate.swift in Sources */,
 				2A0F3124228BE7BB00E493AC /* HandsOnClass.swift in Sources */,
 			);
